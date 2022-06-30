@@ -9,18 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Turtle Rock")
-                .font(.title)
-                .foregroundColor(.green)
-            Text("Joshua Tree National Park")
-        }
-        
+        //this is the view that gets loaded first
+        LandmarkList()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
     }
 }
